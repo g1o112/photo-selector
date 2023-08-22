@@ -1,0 +1,43 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+
+<mat-toolbar class="navigation-bar">
+
+
+  <a class="logo-spacer" href="http://localhost:4200">
+    <img src="assets/logo_colecao.png" class="logo"/>
+  </a>
+
+
+  <div class="nav_list">
+
+      <nav class="box">
+          <ul class="box row">
+              <li class="box">
+                  <a href="" class="link active box">Home</a>
+              </li>
+              <li class="box">
+                  <a href="" class="link box">Sobre nós</a>
+              </li>
+              <li class="box">
+                  <a href="" class="link box">Loja</a>
+              </li>
+              <li class="box">
+                  <a href="" class="link box">Coleções</a>
+              </li>
+              <li class="box">
+                <a href="" class="link box">Contato</a>
+            </li>
+          </ul>
+      </nav>
+  </div>
+
+  <!--Botão Login-->
+  <button mat-button class="login">
+    <a>LogIn</a>
+  </button>
+
+  <!--Botão Cadastro-->
+  <button class="cadastro" (click)="goToAdvancedSearch()">
+    <a>Cadastre-se</a>
+  </button>
+</mat-toolbar>

@@ -1,0 +1,21 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+
+<div class="recomend">
+  <h1>De acordo com o seu <div class="around"> Gosto</div></h1>
+</div>
+
+<ngx-masonry class="imagens-container">
+  <ng-container *ngFor="let imagem of images">
+    <div class="image-div">
+      <a class="masonry-item" [routerLink]="['/image', imagem.id]">
+        <img [src]="imagem.url" alt="Imagem" class="image-item">
+      </a>
+    </div>
+  </ng-container>
+</ngx-masonry>
+
+  <!-- <div *ngFor="let imagem of images">
+    <img [src]="imagem.url">
+  </div> -->
+

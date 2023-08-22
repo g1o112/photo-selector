@@ -1,0 +1,24 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<div class="fundo">
+
+  <div class="text1">
+    <h1>TORNE SUA<br>CASA ÚNICA.</h1>
+      <h2>
+        Explore por Categoria e Descubra a Arte<br>
+        que Combinará com seu espaço</h2>
+
+        <div style="display: flex; flex-direction: row; align-items: center;">
+
+          <form class="div-search" (ngSubmit)="onInputSearch()">
+            <input class="search-bar" placeholder="Pesquisar" type="text" id="search" name="search" (ngModel)="textToSearch">
+          </form>
+
+          <button aria-label="Example fab with a heart icon" class="botao-rosa" mat-fab (click)="openCadastroPopup()">
+            <img src="https://cdn.discordapp.com/attachments/1141724704021958748/1142106854147751996/Vector.png">
+          </button>
+
+        </div>
+  </div>
+</div>
+

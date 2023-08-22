@@ -1,0 +1,72 @@
+<mat-stepper>
+
+  <!-- adicionar foto -->
+  <mat-step>
+    <ng-template matStepLabel>Adicionar foto</ng-template>
+
+    <form [formGroup]="imageFormulario" class="example-form">
+      <mat-form-field class="barra-inteira">
+        <mat-label>Foto (URL)</mat-label>
+        <input matInput formControlName="fotoUrl" />
+      </mat-form-field>
+
+      <div *ngIf="isUrlValid == false" class="error">
+        Campo vazio ou URL inválida.
+      </div>
+
+      <div class="box-botoes">
+        <button mat-button (click)="toSecondStep(fotoUrl?.value)">
+          Próximo
+        </button>
+      </div>
+    </form>
+  </mat-step>
+
+  <!-- adicionar categorias -->
+  <mat-step>
+    <ng-template matStepLabel>Adicionar categorias</ng-template>
+
+    <div class="main-display" *ngIf="this.isUrlValid == true; else urlnotfound">
+
+      <div class="image-display">
+        <img [src]="urlImage" class="foto-exemplo" />
+      </div>
+
+      <div class="tag-display">
+        <div class="show-tags">
+          <header>Tags da Imagem</header>
+          <ngx-masonry class="keywords-list">
+            <ng-container *ngFor="let keyword of keywordsPadrao" class="keyword">
+              <button mat-button class="keyword" (click)="onRemoveTag(keyword)">{{ keyword }}</button>
+            </ng-container>
+          </ngx-masonry>
+        </div>
+
+        <div class="add-tags">
+          <p>Adicione mais <b>TAG</b>s!</p>
+          <form (ngSubmit)="onInputTag()">
+            <input type="text" id="newTag" name="newTag" class="input-tag" [(ngModel)]="newKeyword"/>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <p *ngIf="showError==false" style="padding: 10px;"></p>
+    <p style="color:red;font-weight: bold; display: flex; justify-content: end;" *ngIf="showError">A foto precisa de pelo menos uma categoria!</p>
+    <div class="box-botoes">
+      <button mat-button matStepperPrevious>Voltar</button>
+      <button mat-button (click)="onSubmit()">Cadastrar</button>
+    </div>
+  </mat-step>
+
+</mat-stepper>
+
+
+<ng-template #urlnotfound>
+  <div class="erro">
+    Adicione uma imagem antes!
+  </div>
+</ng-template>
+
+

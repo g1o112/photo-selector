@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'NomeDaFonte';
+  src: url('assets/fonts/Montserrat-VariableFont_wght.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: "Montserrat", sans-serif;}
