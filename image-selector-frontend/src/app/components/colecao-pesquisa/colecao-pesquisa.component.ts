@@ -56,4 +56,8 @@ export class ColecaoPesquisaComponent implements OnInit{
     });
   }
 
+  onClickCategoria(categoria: String) {
+    this.route.navigateByUrl("/buscar/" + categoria);
+  }
+
 }

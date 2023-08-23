@@ -20,10 +20,20 @@
         </div>
 
         <!-- 9 primeiras categorias-->
-          <ul class="keyword-list">
-           <li class="l1" *ngFor="let keyword of keywords"><a href="#">+ {{ keyword }}</a></li>
+          <!-- <ul class="keyword-list">
+           <li class="l1" *ngFor="let keyword of keywords"><p href="#">+ {{ keyword }}</p></li>
            <div class="l2"><li *ngFor="let keyword of keywords2"><a href="#">+ {{ keyword }}</a></li></div>
-          </ul>
+          </ul> -->
+
+
+            <div class="list-line">
+              <button class="item-lista" (click)="onClickCategoria(keyword)" *ngFor="let keyword of keywords">+ {{ keyword }}</button>
+            </div>
+
+            <div class="list-line">
+              <button class="item-lista" (click)="onClickCategoria(keyword)" *ngFor="let keyword of keywords2">+ {{ keyword }}</button>
+            </div>
+
   </div>
 </div>
 
