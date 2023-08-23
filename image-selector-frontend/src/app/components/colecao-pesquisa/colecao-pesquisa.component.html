@@ -20,11 +20,10 @@
         </div>
 
         <!-- 9 primeiras categorias-->
-        <div class="cat">
           <ul class="keyword-list">
-            <li *ngFor="let keyword of keywords">+ {{ keyword }}</li>
+            <li class="l1" *ngFor="let keyword of keywords"><a>+ {{ keyword }}</a></li>
+           <div class="l2"><li *ngFor="let keyword of keywords2"><a>+ {{ keyword }}</a></li></div>
           </ul>
-        </div>
   </div>
 </div>
 

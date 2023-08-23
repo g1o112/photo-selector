@@ -18,6 +18,7 @@ export class ColecaoPesquisaComponent implements OnInit{
   textToSearch: String = '';
   isSearchBarShown = false;
   keywords !: String[];
+  keywords2 !: String[];
 
   constructor(public dialog: MatDialog, private formBuilder: FormBuilder, private route: Router, private service: BackendService) {
     this.searchFormulario = this.formBuilder.group({
@@ -27,7 +28,8 @@ export class ColecaoPesquisaComponent implements OnInit{
   ngOnInit(): void {
     this.service.getAllKeywords().subscribe(
       (data) => {
-        this.keywords = data.slice(0, 9);
+        this.keywords = data.slice(11,16);
+        this.keywords2 = data.slice(0,4);
         console.log(this.keywords);
       },
       (error) =>{
