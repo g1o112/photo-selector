@@ -1,6 +1,7 @@
 mat-stepper {
+  font-family: 'Montserrat';
   align-items: center;
-  margin: 10px;
+  margin: 20px;
 }
 
 .box-botoes {
@@ -26,10 +27,13 @@ mat-stepper {
 .keyword {
   border: 4 solid black;
   background-color: rgb(117, 117, 117);
+  color: #ffff;
+
   margin: 3px;
-  font-weight: bold;
+  font-weight: 400;
   padding-right: 5px;
   padding-left: 5px;
+
   overflow: hidden;
   border-radius: 15px;
   height: 20px;

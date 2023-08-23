@@ -33,17 +33,8 @@ export class BackendService{
     return this.http.get<Imagem[]>(`${this.urlAPI}/keywords/exibir/${tag}`);
   }
 
-  public startDataBase() {
-    return this.http.get(`${this.urlAPI}/images/start-bd`).subscribe(
-      (data) => {
-        console.log(data)
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+  public getAllKeywords(): Observable<String[]> {
+    return this.http.get<String[]>(`${this.urlAPI}/keywords/categorias`);
   }
-
-
 
 }

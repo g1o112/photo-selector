@@ -51,10 +51,7 @@ export class MainToolbarComponent {
   }
 
   goToAdvancedSearch() {
-    this.service.startDataBase();
   }
-
-
 
 
 }

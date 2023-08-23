@@ -73,3 +73,37 @@
   border: none;
 }
 
+.cat {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.keyword-list {
+  width: 500px;
+  height: 100px;
+
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.keyword-list li {
+    font-family: 'Montserrat';
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffff;
+
+    background-color: rgba(241, 241, 241, 0.65);
+    height: 35px;
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 10px;
+    flex: 1 1 90px; /* Ocupa metade da largura disponível */
+}

@@ -17,7 +17,13 @@
           <button aria-label="Example fab with a heart icon" class="botao-rosa" mat-fab (click)="openCadastroPopup()">
             <img src="https://cdn.discordapp.com/attachments/1141724704021958748/1142106854147751996/Vector.png">
           </button>
+        </div>
 
+        <!-- 9 primeiras categorias-->
+        <div class="cat">
+          <ul class="keyword-list">
+            <li *ngFor="let keyword of keywords">+ {{ keyword }}</li>
+          </ul>
         </div>
   </div>
 </div>
