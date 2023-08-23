@@ -92,6 +92,7 @@
 .cadastro{
   font-family: 'Montserrat';
   font-size: 14px;
+  font-weight: 500;
 
   display: flex;
   align-items: center;
