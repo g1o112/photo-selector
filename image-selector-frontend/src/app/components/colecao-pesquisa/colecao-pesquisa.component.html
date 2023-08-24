@@ -11,7 +11,7 @@
         <div style="display: flex; flex-direction: row; align-items: center;">
 
           <form class="div-search" (ngSubmit)="onInputSearch()">
-            <input class="search-bar" placeholder="Pesquisar" type="text" id="search" name="search" (ngModel)="textToSearch">
+            <input class="search-bar" placeholder="Pesquisar" type="text" id="search" name="search" (ngModel)="textToSearch" [(ngModel)]="categoriaSelecionada">
           </form>
 
           <button aria-label="Example fab with a heart icon" class="botao-rosa" mat-fab (click)="openCadastroPopup()">

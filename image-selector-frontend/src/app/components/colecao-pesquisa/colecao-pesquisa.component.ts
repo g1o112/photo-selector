@@ -19,6 +19,7 @@ export class ColecaoPesquisaComponent implements OnInit{
   isSearchBarShown = false;
   keywords !: String[];
   keywords2 !: String[];
+  categoriaSelecionada: String = '';
 
   constructor(public dialog: MatDialog, private formBuilder: FormBuilder, private route: Router, private service: BackendService) {
     this.searchFormulario = this.formBuilder.group({
@@ -57,6 +58,7 @@ export class ColecaoPesquisaComponent implements OnInit{
   }
 
   onClickCategoria(categoria: String) {
+    this.categoriaSelecionada = categoria;
     this.route.navigateByUrl("/buscar/" + categoria);
   }
 
