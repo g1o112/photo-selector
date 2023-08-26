@@ -11,7 +11,7 @@
         <div style="display: flex; flex-direction: row; align-items: center;">
 
           <form class="search-bar" (ngSubmit)="onInputSearch()">
-            <div *ngFor="let categoria of barra2" ><button (click)="removerCategoria(categoria)" class="categoria-bar">× {{categoria}}</button></div>
+            <div *ngFor="let categoria of barra2" ><button (click)="removerCategoria(categoria)" class="categoria-bar" mat-button>× {{categoria}}</button></div>
             <input class="search-bar2" placeholder="Pesquisar" type="text" id="search" name="search" (ngModel)="textToSearch" [(ngModel)]="categoriaSelecionada" *ngIf="barra2.length == 0">
           </form>
 
@@ -22,11 +22,11 @@
 
           <div class="cat">
             <div class="list-line">
-              <button class="item-lista" (click)="onClickCategoria(keyword)" *ngFor="let keyword of keywords">+ {{ keyword }}</button>
+              <button class="item-lista" (click)="onClickCategoria(keyword)" *ngFor="let keyword of keywords" mat-button>+ {{ keyword }}</button>
             </div>
 
             <div class="list-line">
-              <button class="item-lista" (click)="onClickCategoria(keyword)" *ngFor="let keyword of keywords2">+ {{ keyword }}</button>
+              <button class="item-lista" (click)="onClickCategoria(keyword)" *ngFor="let keyword of keywords2" mat-button>+ {{ keyword }}</button>
             </div>
           </div>
   </div>

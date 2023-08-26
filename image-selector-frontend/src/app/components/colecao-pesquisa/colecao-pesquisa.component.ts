@@ -69,7 +69,7 @@ export class ColecaoPesquisaComponent implements OnInit{
   removerCategoria(categoria: String) {
     const categoriaIndex = this.barra2.indexOf(categoria);
     if (categoriaIndex !== -1) {
-      this.barra2.splice(categoriaIndex, 1); // Remove a categoria da lista
+      this.barra2.splice(categoriaIndex, 1);
     }
   }
 
