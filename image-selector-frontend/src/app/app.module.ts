@@ -27,6 +27,7 @@ import { AdvancedSearchComponent } from './components/advanced-search/advanced-s
 import { ExemploComponent } from './components/exemplo/exemplo.component';
 import { ColecaoPesquisaComponent } from './components/colecao-pesquisa/colecao-pesquisa.component';
 import { HomeComponentComponent } from './components/home-component/home-component.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -42,7 +43,8 @@ import { HomeComponentComponent } from './components/home-component/home-compone
     AdvancedSearchComponent,
     ExemploComponent,
     ColecaoPesquisaComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

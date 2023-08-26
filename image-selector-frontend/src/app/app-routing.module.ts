@@ -6,13 +6,14 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { AdvancedSearchComponent } from './components/advanced-search/advanced-search.component';
 import { ColecaoPesquisaComponent } from './components/colecao-pesquisa/colecao-pesquisa.component';
 import { HomeComponentComponent } from './components/home-component/home-component.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponentComponent},
-  { path: '', component: HomeComponentComponent },
-  { path: 'galeria', component: GaleriaComponent },
+  { path: 'home', component: HomeComponent},
+  { path: '', component: HomeComponent },
+  { path: 'galeria', component: HomeComponentComponent },
   { path: 'buscar/:tag', component: HomeComponentComponent },
   { path: 'busca-avancada', component: AdvancedSearchComponent },
   { path: 'image/:id', component: ImagemExpandidaComponent },

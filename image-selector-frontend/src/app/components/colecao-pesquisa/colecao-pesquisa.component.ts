@@ -20,6 +20,7 @@ export class ColecaoPesquisaComponent implements OnInit{
   keywords !: String[];
   keywords2 !: String[];
   categoriaSelecionada: String = '';
+  barra2: String[] = [];
 
   constructor(public dialog: MatDialog, private formBuilder: FormBuilder, private route: Router, private service: BackendService) {
     this.searchFormulario = this.formBuilder.group({
@@ -58,8 +59,18 @@ export class ColecaoPesquisaComponent implements OnInit{
   }
 
   onClickCategoria(categoria: String) {
+
+    this.barra2.push(categoria);
     this.categoriaSelecionada = categoria;
     this.route.navigateByUrl("/buscar/" + categoria);
+
+  }
+
+  removerCategoria(categoria: String) {
+    const categoriaIndex = this.barra2.indexOf(categoria);
+    if (categoriaIndex !== -1) {
+      this.barra2.splice(categoriaIndex, 1); // Remove a categoria da lista
+    }
   }
 
 }
