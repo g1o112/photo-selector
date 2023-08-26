@@ -52,6 +52,4 @@ export class MainToolbarComponent {
 
   goToAdvancedSearch() {
   }
-
-
 }
