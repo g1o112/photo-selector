@@ -1,6 +1,13 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
 <div *ngIf="isLoading == false" class="imagem-expandida-content">
   <img [src]="imagemExibida.url" class="imagem-main">
-  <div *ngFor="let categoria of keywordsImagem"> {{ categoria }}</div>
-</div>
 
+  <div class="ladinho">
+  <div class="categorias" *ngFor="let categoria of keywordsImagem"> {{ categoria }}</div>
+  <div class="quero">
+    <button mat-button class="botao">Escolher Este</button>
+  </div>
+</div>
+</div>
 
