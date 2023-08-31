@@ -1,0 +1,101 @@
+.titulo{
+  width: 100%;
+  height: 100vh;
+  background-color: #191919;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: sticky;
+  top: 0;
+}
+
+section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.titulo h1, h2{
+  font-family: 'Montserrat';
+
+  font-size: 70px;
+  color: #ffff;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.titulo h2{
+  margin-left: 100px;
+}
+
+.titulo p{
+  font-family: 'Montserrat';
+  color: #ffff;
+
+  margin-top: 20px;
+
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.botao{
+  margin-top: 70px;
+}
+
+.bt1{
+  font-family: 'Montserrat';
+  background-color: #ffff;
+  border-radius: 70px;
+
+  padding: 0px 40px 0px 40px;
+  color: #191919;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+
+.bt1:hover{
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 50px 100px -20px, rgba(255, 255, 255, 0.4) 0px 30px 60px -30px;
+}
+
+.bt2{
+  font-family: 'Montserrat';
+  border-radius: 70px;
+
+  padding: 0px 20px 0px 20px;
+  color: #ffff;
+  font-size: 15px;
+  font-weight: 500;
+
+  padding-left: 20px; /* Adicione um padding para a esquerda para separar o texto da imagem */
+
+  background-image: url("src/assets/seta.png");
+  background-repeat: no-repeat;
+  background-position: right center; /* Centralize verticalmente o ícone */
+  background-position-x: calc(100% - 5px); /* Posicione a imagem no canto superior direito com um espaço */
+
+}
+
+.content-section{
+  width: 100%;
+  height: 100vh;
+
+  background-position: center;
+  background-size: cover;
+}
+
+.content-section:nth-child(1){
+  background-image: url(src/assets/fundo7.svg);
+}
+.content-section:nth-child(2){
+  background-image: url(src/assets/fundo2.jpg);
+}
+.content-section:nth-child(3){
+  background-image: url(src/assets/fundo3.jpg);
+}
+.content-section:nth-child(4){
+  background-image: url(src/assets/fundo4.jpg);
+}
